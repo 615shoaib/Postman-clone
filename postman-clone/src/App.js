@@ -5,7 +5,7 @@ function App() {
   <>
     <Button>Click</Button>
     <h1>Helo github</h1>
-    <Typography
+    <Typography>postman</Typography>
   </>
    
   );
