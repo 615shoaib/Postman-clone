@@ -1,10 +1,13 @@
+import Header from "./Header"
+import Form from "./Textfield"
 
 
 
 const Home=()=>{
     return(
         <>
-        <h1> this is Home</h1>
+        <Header />
+        <Form />
         </>
     )
 }
