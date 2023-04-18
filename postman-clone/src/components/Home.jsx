@@ -4,6 +4,8 @@ import { Box, styled } from "@mui/material"
 import Header from "./Header"
 import Form from "./Textfield"
 import SelectTabs from "./SelectTabs"
+import Response from "./Response"
+import Error  from './Error'
 
   const Components = styled(Box)`
     width:60%;
@@ -20,6 +22,8 @@ const Home=()=>{
         <Components>
         <Form />
         <SelectTabs />
+        {/* <Response /> */}
+        <Error />
         </Components>
         </>
     )

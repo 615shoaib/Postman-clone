@@ -1,7 +1,8 @@
 
 import { Box, Tabs, Tab, styled } from "@mui/material";
 import { useState } from 'react'
-import Table from "./Table";
+import CreateTable  from "./Table";
+import CreateJsonText from "./createjsontext";
 
 
 const SelectTabs = () => {
@@ -37,7 +38,7 @@ const SelectTabs = () => {
           id={`simple-tabpanel-${0}`}
           aria-labelledby={`simple-tab-${0}`}
         >
-          <Table text="params" /> 
+          <CreateTable text={'Quary params'} /> 
         </Box>
 
         <Box
@@ -46,7 +47,7 @@ const SelectTabs = () => {
           id={`simple-tabpanel-${1}`}
           aria-labelledby={`simple-tab-${1}`}
         >
-           <Table /> 
+           <CreateTable  text={'Headers'} /> 
         </Box>
 
 
@@ -56,7 +57,7 @@ const SelectTabs = () => {
           id={`simple-tabpanel-${2}`}
           aria-labelledby={`simple-tab-${2}`}
         >
-         Body
+        <CreateJsonText />
         </Box>
 
       </Components>
