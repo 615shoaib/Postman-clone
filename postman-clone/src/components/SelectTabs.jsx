@@ -1,6 +1,7 @@
 
 import { Box, Tabs, Tab, styled } from "@mui/material";
 import { useState } from 'react'
+import Table from "./Table";
 
 
 const SelectTabs = () => {
@@ -36,7 +37,7 @@ const SelectTabs = () => {
           id={`simple-tabpanel-${0}`}
           aria-labelledby={`simple-tab-${0}`}
         >
-          Params 
+          <Table text="params" /> 
         </Box>
 
         <Box
@@ -45,7 +46,7 @@ const SelectTabs = () => {
           id={`simple-tabpanel-${1}`}
           aria-labelledby={`simple-tab-${1}`}
         >
-          Headers
+           <Table /> 
         </Box>
 
 
