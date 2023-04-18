@@ -1,4 +1,12 @@
-import {Box,Typography} from '@mui/material'
+import {Box,Typography, styled} from '@mui/material'
+
+// styled components
+    const Images=styled('img')`
+    width:60%;
+    height:auto;
+    margin:auto;
+    object-position:center 0%;
+    `
 
 const Error=()=>{
     const error = 'https://i.stack.imgur.com/01tZQ.png';
@@ -6,8 +14,8 @@ const Error=()=>{
         <>
          <Box>
        <Typography mt={2} mb={2}>Response</Typography>
-        <Box>
-            <img src={error} alt="error" />
+        <Box style={{display:"flex"}}>
+            <Images src={error} alt="error" />
         </Box>
        </Box>
         </>

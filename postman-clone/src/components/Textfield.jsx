@@ -1,5 +1,10 @@
+import { useContext } from "react"
+
 import { Box, Select, MenuItem, styled, TextField, Button } from "@mui/material"
-import { useState } from "react"
+
+
+// components
+import { Datacontext } from "../Context/Dataprovider"
 
 const Form = () => {
   const Container = styled(Box)`
@@ -24,24 +29,33 @@ const Form = () => {
   // const [age, setAge] = useState(0)
 
 
-  // const handleChange = () => {
-  //   setAge(1)
-  // }
+ 
+  const {form,setForm}= useContext(Datacontext);
+    const handleChange = (e) => {
+      setForm({ ...form, type: e.target.value})
+      // console.log(form)
+      }
+
+      const OurUrlChange = (e) => {
+        setForm({ ...form, url: e.target.value})
+        console.log(form)
+        }
+ 
   return (
     <>
       <Container>
 
         <Tabs
-          // value={age}
+          value={form.type}
           label="POST"
-          // onChange={handleChange}
+          onChange={(e)=>handleChange(e)}
         // variant="standard"
         >
 
           <MenuItem value={'POST'}>POST</MenuItem>
           <MenuItem value={'GET'}>GET</MenuItem>
         </Tabs>
-        <Input type="input" size="small" />
+        <Input type="input" size="small" onClick={(e)=>OurUrlChange(e)} />
         <Btn variant="contained" disableRipple>Send</Btn>
       </Container>
     </>
