@@ -12,7 +12,7 @@ const SelectTabs = () => {
   const Components=styled(Box)`
   margin-top:20px;
   `
-  const Paragraph=styled=(Tab)`
+  const Paragraph=styled(Tab)`
   text-transform: none !important;
   `
   return (
