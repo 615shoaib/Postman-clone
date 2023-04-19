@@ -20,27 +20,28 @@ const Form = () => {
     width:100%;
     background:#f6f6f6;
     `
-    const Btn=styled(Button)`
+  const Btn = styled(Button)`
     width:100px;
     height:40px;
     margin-left:5px !important;
     `
-   
+
   // const [age, setAge] = useState(0)
 
 
- 
-  const {form,setForm}= useContext(Datacontext);
-    const handleChange = (e) => {
-      setForm({ ...form, type: e.target.value})
-      // console.log(form)
-      }
 
-      const OurUrlChange = (e) => {
-        setForm({ ...form, url: e.target.value})
-        console.log(form)
-        }
- 
+  const { form, setForm } = useContext(Datacontext);
+  const handleChange = (e) => {
+    setForm({ ...form, type: e.target.value })
+    // console.log(form)
+  }
+
+  const OurUrlChange = (e) => {
+    setForm({...form, url :e.target.value})
+
+    console.log(form)
+  }
+
   return (
     <>
       <Container>
@@ -48,14 +49,14 @@ const Form = () => {
         <Tabs
           value={form.type}
           label="POST"
-          onChange={(e)=>handleChange(e)}
+          onChange={(e) => handleChange(e)}
         // variant="standard"
         >
 
           <MenuItem value={'POST'}>POST</MenuItem>
           <MenuItem value={'GET'}>GET</MenuItem>
         </Tabs>
-        <Input type="input" size="small" onClick={(e)=>OurUrlChange(e)} />
+        <Input type="input" size="small" onChange={(e) => OurUrlChange(e)} />
         <Btn variant="contained" disableRipple>Send</Btn>
       </Container>
     </>
